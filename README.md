@@ -6,6 +6,7 @@
 [![License](https://poser.pugx.org/wearemarketing/paylands-php/license.svg)](https://packagist.org/packages/wearemarketing/paylands-php)
 
 You can get your Paylands account at [Paynopain](https://http://paylands.com/)
+@Payments
 
 ## Requirements
 
