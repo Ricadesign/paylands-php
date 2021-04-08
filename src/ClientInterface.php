@@ -65,7 +65,7 @@ interface ClientInterface
      *
      * @return array
      */
-    public function createPayment($customerExtId, $amount, $description, $service, $url_post = null,  $extraData = []);
+    public function createPayment($customerExtId, $amount, $description, $service, $url_post = null, $url_ok = null, $url_ko = null,  $extraData = []);
 
 
 
