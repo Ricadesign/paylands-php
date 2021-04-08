@@ -70,7 +70,7 @@ class RequestFactory
      *
      * @return RequestInterface
      */
-    public function createPaymentRequest($customerExtId, $amount, $description, $operative, $service, $url_post = null, $extraData = [])
+    public function createPaymentRequest($customerExtId, $amount, $description, $operative, $service, $url_post = null, $url_ok = null, $url_ko = null, $extraData = [])
     {
         $data = [
             'customer_ext_id' => (string) $customerExtId,
@@ -79,12 +79,13 @@ class RequestFactory
             'service' => $service,
             'description' => $description,
             'url_post' => $url_post,
-        ];
-
+            'url_ok' => $url_ok,
+            'url_ko' => $url_ko,
+        ];  
+        
         if (!empty($extraData)) {
             $data['extra_data'] = $extraData;
         }
-
         return $this->createRequest('POST', '/payment', $data);
     }
 
