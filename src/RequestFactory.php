@@ -70,9 +70,10 @@ class RequestFactory
      *
      * @return RequestInterface
      */
-    public function createPaymentRequest($customerExtId, $amount, $description, $operative, $service, $url_post = null, $url_ok = null, $url_ko = null, $extraData = [])
+    public function createPaymentRequest($customerExtId, $amount, $description, $operative, $service, $url_post = null, $url_ok = null, $url_ko = null, $secure = false, $extraData = [])
     {
         $data = [
+            'secure' => $secure,
             'customer_ext_id' => (string) $customerExtId,
             'amount' => $amount,
             'operative' => $operative,
